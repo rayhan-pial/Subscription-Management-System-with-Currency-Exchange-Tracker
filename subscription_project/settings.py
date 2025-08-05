@@ -19,8 +19,7 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 EXCHANGE_RATE_API_KEY = os.getenv("EXCHANGE_RATE_API_KEY")
-EXCHANGE_RATE_API_URL = os.getenv("EXCHANGE_RATE_API_URL")
-# debug_mode = os.getenv('DEBUG') == 'True'
+EXCHANGE_RATE_API_URL = "https://v6.exchangerate-api.com/v6/"
 
 
 # Application definition
@@ -34,8 +33,8 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "rest_framework",
     "rest_framework_simplejwt",
-    'django_celery_beat',
-    'django_celery_results',
+    "django_celery_beat",
+    "django_celery_results",
     "core",
 ]
 
@@ -130,8 +129,8 @@ REST_FRAMEWORK = {
 
 CELERY_BROKER_URL = os.getenv("CELERY_BROKER_URL")
 CELERY_RESULT_BACKEND = os.getenv("CELERY_RESULT_BACKEND")
-CELERY_ACCEPT_CONTENT = ['json']
-CELERY_TASK_SERIALIZER = 'json'
-CELERY_RESULT_SERIALIZER = 'json'
+CELERY_ACCEPT_CONTENT = ["json"]
+CELERY_TASK_SERIALIZER = "json"
+CELERY_RESULT_SERIALIZER = "json"
 
-CELERY_BEAT_SCHEDULER = 'django_celery_beat.schedulers:DatabaseScheduler'
+CELERY_BEAT_SCHEDULER = "django_celery_beat.schedulers:DatabaseScheduler"
