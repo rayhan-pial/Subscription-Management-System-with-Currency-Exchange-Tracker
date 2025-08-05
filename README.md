@@ -43,6 +43,8 @@ Terminal 4: Start Manual Exchange Rate Fetch Task
 
 ### Get Token (POST) url - http://127.0.0.1:8000/api/token/
 
+Body - { "username": "name", "password": "password"}
+
 Response- { "access": "new_access_token"}
 
 ### Get Token (POST) url -http://127.0.0.1:8000/api/token/refresh/
